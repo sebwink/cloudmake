@@ -1,0 +1,4 @@
+version: "3"
+services: 
+  springboot-app:
+    image: ${DOCKER_USER:-sebwink}/springboot-app:${DOCKER_TAG:-latest}

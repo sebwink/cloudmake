@@ -1,0 +1,10 @@
+[package]
+name = "actix-app"
+version = "0.1.0"
+authors = ["sebwink <sebwink@gmx.net>"]
+edition = "2018"
+
+[dependencies]
+actix-web = "0.7"
+serde = "1.0.*"
+serde_derive = "1.0.*"

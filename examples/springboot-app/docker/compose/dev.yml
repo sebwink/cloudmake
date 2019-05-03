@@ -1,0 +1,19 @@
+version: "3"
+services: 
+  springboot-app:
+    build:
+      context: ../..
+      dockerfile: ./docker/dev/Dockerfile 
+    volumes:
+      - '../../src:/app/src:ro'
+    ports:
+      - '8080:8080/tcp'
+  source-watcher:
+    image: ${DOCKER_USER}/source-watcher:${DOCKER_TAG}
+    build:
+      context: ../source-watcher 
+    environment:
+      TARGET_CONTAINER: springboot-app_springboot-app_1
+    volumes:
+      - '/var/run/docker.sock:/var/run/docker.sock'
+      - '../../src:/app/src:ro'

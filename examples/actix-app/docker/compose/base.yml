@@ -1,0 +1,4 @@
+version: "3"
+services:
+  actix-app:
+    image: ${DOCKER_USER:-sebwink}/actix-app:${DOCKER_TAG:-latest}

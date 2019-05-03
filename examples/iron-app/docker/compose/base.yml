@@ -1,0 +1,4 @@
+version: "3"
+services:
+  iron-app:
+    image: ${DOCKER_USER:-sebwink}/iron-app:${DOCKER_TAG:-latest}

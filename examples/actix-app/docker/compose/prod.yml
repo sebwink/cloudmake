@@ -1,0 +1,8 @@
+version: "3"
+services:
+  actix-app:
+    build:
+      context: '../..'
+      dockerfile: './docker/prod/Dockerfile'
+    ports:
+      - '${APP_PORT:-8088}:8088/tcp'

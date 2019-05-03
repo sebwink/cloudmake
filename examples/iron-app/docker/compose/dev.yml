@@ -1,0 +1,10 @@
+version: "3"
+services:
+  iron-app:
+    build:
+      context: '../..'
+      dockerfile: './docker/dev/Dockerfile'
+    volumes:
+      - '../../src:/app/src'
+    ports:
+      - '${APP_PORT:-3000}:3000/tcp'

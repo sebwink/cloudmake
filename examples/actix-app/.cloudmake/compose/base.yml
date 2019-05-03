@@ -1,0 +1,11 @@
+version: "3"
+services:
+  cloudmake-registry:
+    image: registry:2
+    restart: always 
+    container_name: cloudmake-registry
+  push-image:
+    image: cloudmake/docker-push
+networks:
+  kubeadm-dind-net-cloudmake:
+    external: True

@@ -1,0 +1,10 @@
+version: "3"
+services:
+  actix-app:
+    build:
+      context: '../..'
+      dockerfile: './docker/dev/Dockerfile'
+    volumes:
+      - '../../src:/app/src'
+    ports:
+      - '${APP_PORT:-8088}:8088/tcp'

@@ -1,0 +1,4 @@
+version: "3"
+services:
+  hyper-app:
+    image: ${DOCKER_USER:-sebwink}/hyper-app:${DOCKER_TAG:-latest}

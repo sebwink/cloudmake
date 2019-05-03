@@ -1,0 +1,11 @@
+[package]
+name = "rocket-app"
+version = "0.1.0"
+authors = ["sebwink <sebwink@gmx.net>"]
+edition = "2018"
+
+[dependencies]
+rocket = "0.4.0"
+rocket_contrib = "0.4.0"
+serde = "1.0.90"
+serde_derive = "1.0.90"

@@ -1,0 +1,10 @@
+version: "3"
+services: 
+  node-app:
+    build:
+      context: ../..
+      dockerfile: ./docker/dev/Dockerfile
+    volumes:
+      - '../../src:/app/src'
+    ports:
+      - '${APP_DEV_PORT:-3000}:3000/tcp'

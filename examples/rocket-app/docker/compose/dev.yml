@@ -1,0 +1,11 @@
+version: "3"
+services:
+  rocket-app:
+    build:
+      context: '../..'
+      dockerfile: './docker/dev/Dockerfile'
+    volumes:
+      - '../../src:/app/src'
+      - '../../static:/app/static'
+    ports:
+      - '${APP_PORT:-8000}:8000/tcp'

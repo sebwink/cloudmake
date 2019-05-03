@@ -1,0 +1,7 @@
+version: "3"
+services:
+  rocket-app:
+    image: ${DOCKER_USER:-sebwink}/rocket-app:${DOCKER_TAG:-latest}
+    environment:
+      ROCKET_ADDRESS: 0.0.0.0
+      ROCKER_PORT: 8000

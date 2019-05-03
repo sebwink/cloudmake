@@ -1,0 +1,28 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: /usr/local/bin/kompose -f /home/bbubu/projects/cloudmake-examples/actix-app/ops/k8s/prod/.stack.yml
+      -o /home/bbubu/projects/cloudmake-examples/actix-app/ops/k8s/prod convert
+    kompose.version: 1.17.0 (a74acad)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: actix-app
+  name: actix-app
+spec:
+  replicas: 1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        io.kompose.service: actix-app
+    spec:
+      containers:
+      - image: cloudmake-registry:5000/actix-app/actix-app:1.0
+        name: actix-app
+        ports:
+        - containerPort: 8088
+        resources: {}
+      restartPolicy: Always
+status: {}

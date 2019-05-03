@@ -1,0 +1,11 @@
+[package]
+name = "iron-app"
+version = "0.1.0"
+authors = ["sebwink <sebwink@gmx.net>"]
+edition = "2018"
+
+[dependencies]
+iron = "0.6.*"
+mime = "0.2.3"
+router = "0.6.*"
+urlencoded = "0.6.*"

@@ -1,0 +1,12 @@
+services:
+  actix-app:
+    build:
+      context: /home/bbubu/projects/cloudmake-examples/actix-app
+      dockerfile: ./docker/dev/Dockerfile
+    image: actix-app/actix-app:dev-master-0c8a150-dirty
+    ports:
+    - 8088:8088/tcp
+    volumes:
+    - /home/bbubu/projects/cloudmake-examples/actix-app/src:/app/src:rw
+version: '3.0'
+
